@@ -1,0 +1,23 @@
+{
+  "name": "Rage Emoticons",
+  "version": "1.0",
+  "description": "Use rage emoticons in fb chat.",
+  "icons": { 
+  	"16":  "icon.png",
+    "48":  "icon.png",
+    "128": "icon.png" 
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*"],
+      "js": ["rage.js"],
+	  "run_at":"document_end"
+    }
+  ],
+  "permissions": [
+    "*://*.facebook.com/*"
+  ]
+}
